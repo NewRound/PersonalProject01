@@ -8,10 +8,13 @@ public enum ItemType
     Consumable
 }
 
-public enum ConsumableType
+public enum IncreaseType
 {
+    AttackDamage,
+    Defense,
     Health,
-    Buff
+    CriticalChance,
+    HPRecovery,
 }
 
 [CreateAssetMenu(fileName = "Item", menuName = "New Item")]
@@ -24,6 +27,10 @@ public class ItemData : ScriptableObject
     public Sprite icon;
     public bool isEquiped;
     // public GameObject dropPrefab;
+
+    [Header("ValueInfo")]
+    public IncreaseType incrementType;
+    public int value;
 
     [Header("Stacking")]
     public bool canStack;

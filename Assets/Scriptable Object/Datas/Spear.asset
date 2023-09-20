@@ -17,5 +17,7 @@ MonoBehaviour:
   type: 0
   icon: {fileID: 21300000, guid: cfa9e621c05f57a48b23833b3647a0bb, type: 3}
   isEquiped: 0
+  incrementType: 0
+  value: 2
   canStack: 0
   maxStackAmount: 0
