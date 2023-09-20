@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bcab2ec959d98da4bab3ff1a2b1e132d, type: 3}
-  m_Name: Sword
+  m_Name: Steph
   m_EditorClassIdentifier: 
-  displayName: "\uAC80"
-  description: "\uD754\uD55C \uC591\uC0B0\uD615 \uAC80."
+  displayName: "\uC9C0\uD321\uC774"
+  description: "\uCD08\uBCF4\uC790\uC6A9 \uC9C0\uD321\uC774"
   type: 0
-  icon: {fileID: 21300000, guid: 24c0e591c89373b4bb29149dad5e9c0b, type: 3}
-  isEquiped: 1
+  icon: {fileID: 21300000, guid: 7776b1ab76c1ceb468f15149f30eac65, type: 3}
+  isEquiped: 0
   canStack: 0
   maxStackAmount: 0
