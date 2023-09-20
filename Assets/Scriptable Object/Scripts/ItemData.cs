@@ -25,6 +25,7 @@ public class ItemData : ScriptableObject
     public string description;
     public ItemType type;
     public Sprite icon;
+    public bool equipable;
     public bool isEquiped;
     // public GameObject dropPrefab;
 
