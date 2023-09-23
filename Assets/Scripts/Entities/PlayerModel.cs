@@ -17,5 +17,13 @@ public class PlayerModel : CharacterModel
             level = PlayerPrefs.GetInt("level");
             exp = PlayerPrefs.GetInt("exp");
         }
+        else
+        {
+            Name = "test";
+            description = "test";
+            level = 1;
+            exp = 0;
+        }
+        
     }
 }
