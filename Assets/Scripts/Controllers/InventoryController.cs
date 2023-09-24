@@ -4,6 +4,20 @@ using UnityEngine;
 
 public class InventoryController : MonoBehaviour
 {
-    GameManager gameManager = GameManager.instance;
+    [SerializeField] public GameObject player;
 
+    [SerializeField] public GameObject inventoryAmount;
+    [SerializeField] public GameObject inventoryMaxAmount;
+    [SerializeField] public GameObject inventory;
+
+
+    private void Awake()
+    {
+        
+    }
+
+    private void Start()
+    {
+        
+    }
 }

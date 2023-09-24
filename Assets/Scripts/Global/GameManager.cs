@@ -21,6 +21,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] TMP_Text playerText;
     [SerializeField] TMP_Text Level;
     [SerializeField] Slider EXP;
+    [SerializeField] TMP_Text EXPText;
 
     private void Awake()
     {
@@ -39,6 +40,7 @@ public class GameManager : MonoBehaviour
         playerText.text = playerModel.explanation;
         Level.text = playerModel.level.ToString();
         EXP.value = playerModel.exp / playerModel.maxExp;
+        EXPText.text = (playerModel.exp.ToString() + " / " + playerModel.maxExp.ToString());
     }
 
 
