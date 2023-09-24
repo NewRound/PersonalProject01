@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class InventoryController : MonoBehaviour
 {
+    public static InventoryController instance;
     [SerializeField] public GameObject player;
 
     [SerializeField] public GameObject inventoryAmount;
@@ -13,11 +14,8 @@ public class InventoryController : MonoBehaviour
 
     private void Awake()
     {
-        
+        instance = this;
     }
 
-    private void Start()
-    {
-        
-    }
+    
 }
