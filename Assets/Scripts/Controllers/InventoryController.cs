@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -14,6 +15,8 @@ public class InventoryController : MonoBehaviour
     [SerializeField] public ScrollRect scrollRect; // 스크롤 뷰
     [SerializeField] public RectTransform content; // Content 요소
 
+    private PlayerModel playerModel;
+
     // 추가할 내용을 저장할 프리팹 또는 UI 요소
     [SerializeField] public GameObject itemPrefab;
 
@@ -26,13 +29,18 @@ public class InventoryController : MonoBehaviour
 
     private void Start()
     {
-        PlayerModel playerModel = player.GetComponent<PlayerModel>();
+        playerModel = player.GetComponent<PlayerModel>();
         List<ItemData> itemList = playerModel.inventory;
+
+        for(int i = 0; i < itemList.Count; i++)
+        {
+            AddItem(itemList[i]);
+        }
 
         GameObject item;
     }
 
-    public void ReLoad()
+    public void AddItem(ItemData item)
     {
         GameObject newItem = Instantiate(itemPrefab);
 
@@ -40,8 +48,18 @@ public class InventoryController : MonoBehaviour
         newItem.transform.SetParent(content, false);
 
         // 아이템 초기화 및 위치 설정
-        // 예를 들어, 텍스트를 설정하는 코드
-        Text itemText = newItem.GetComponentInChildren<Text>();
-        itemText.text = "Item ";
+        Image itemImage = newItem.transform.Find("ItemImage").GetComponent<Image>();
+        GameObject equiped = newItem.transform.Find("Equiped").gameObject;
+        if(item.isEquiped)
+        {
+            equiped.SetActive(true);
+        }
+        else
+        {
+            equiped.SetActive(false);
+        }
+
+        itemImage.sprite = item.icon;
+
     }
 }
