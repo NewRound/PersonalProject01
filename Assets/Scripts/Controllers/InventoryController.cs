@@ -1,8 +1,10 @@
+using JetBrains.Annotations;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class InventoryController : MonoBehaviour
@@ -37,7 +39,6 @@ public class InventoryController : MonoBehaviour
             AddItem(itemList[i]);
         }
 
-        GameObject item;
     }
 
     public void AddItem(ItemData item)
@@ -60,6 +61,13 @@ public class InventoryController : MonoBehaviour
         }
 
         itemImage.sprite = item.icon;
+
+    }
+
+    public void EquipItem()
+    {
+        GameObject clickObject = EventSystem.current.currentSelectedGameObject;
+        GameObject Equiped = clickObject.transform.Find("Equiped").gameObject;
 
     }
 }
