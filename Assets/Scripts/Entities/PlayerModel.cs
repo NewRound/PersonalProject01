@@ -9,7 +9,7 @@ public class PlayerModel : CharacterModel
     [SerializeField] public int exp;
 
     [SerializeField] public int inventoryMaxAmount;
-    [SerializeField] List<ItemData> inventory;
+    [SerializeField] public List<ItemData> inventory;
 
     private void Awake()
     {
