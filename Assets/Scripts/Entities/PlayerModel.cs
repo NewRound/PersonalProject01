@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerModel : CharacterModel
 {
     [SerializeField] public int level;
+    [SerializeField] public int maxExp;
     [SerializeField] public int exp;
 
 
@@ -13,15 +14,16 @@ public class PlayerModel : CharacterModel
         if(PlayerPrefs.HasKey("playerName"))
         {
             Name = PlayerPrefs.GetString("playerName");
-            description = PlayerPrefs.GetString ("Description");
+            explanation = PlayerPrefs.GetString ("explanation");
             level = PlayerPrefs.GetInt("level");
             exp = PlayerPrefs.GetInt("exp");
         }
         else
         {
             Name = "test";
-            description = "test";
+            explanation = "test";
             level = 1;
+            maxExp = 10;
             exp = 0;
         }
         

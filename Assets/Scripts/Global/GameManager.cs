@@ -1,6 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -10,11 +13,14 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject player;
 
     [Header("UI")]
-    [SerializeField] GameObject BackgroundUICanvas;
     [SerializeField] GameObject selectUICanvas;
     [SerializeField] GameObject playerInfoUICanvas;
     [SerializeField] GameObject InventoryUICanvas;
     [SerializeField] GameObject backButton;
+    [SerializeField] TMP_Text playerName;
+    [SerializeField] TMP_Text playerText;
+    [SerializeField] TMP_Text Level;
+    [SerializeField] Slider EXP;
 
     private void Awake()
     {
@@ -24,6 +30,15 @@ public class GameManager : MonoBehaviour
         playerInfoUICanvas.SetActive(false);
         InventoryUICanvas.SetActive(false);
         backButton.SetActive(false);
+    }
+
+    private void Start()
+    {
+        PlayerModel playerModel = player.GetComponent<PlayerModel>();
+        playerName.text = playerModel.Name;
+        playerText.text = playerModel.explanation;
+        Level.text = playerModel.level.ToString();
+        EXP.value = playerModel.exp / playerModel.maxExp;
     }
 
 

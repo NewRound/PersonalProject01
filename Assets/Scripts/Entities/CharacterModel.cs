@@ -5,7 +5,7 @@ using UnityEngine;
 public class CharacterModel : MonoBehaviour
 {
     [SerializeField] public string Name;
-    [SerializeField] public string description;
+    [SerializeField] public string explanation;
 
     [SerializeField] public CharacterStats characterStats;
 

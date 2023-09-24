@@ -591,7 +591,7 @@ GameObject:
   - component: {fileID: 156633825}
   - component: {fileID: 156633824}
   m_Layer: 5
-  m_Name: LevelText
+  m_Name: Level
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2058,7 +2058,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 180, y: 160}
+  m_AnchoredPosition: {x: 220, y: 160}
   m_SizeDelta: {x: 300, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &723310283
@@ -2115,7 +2115,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -2793,6 +2793,10 @@ MonoBehaviour:
   playerInfoUICanvas: {fileID: 2051890325}
   InventoryUICanvas: {fileID: 664119059}
   backButton: {fileID: 1709772633}
+  playerName: {fileID: 723310283}
+  playerText: {fileID: 1650113479}
+  Level: {fileID: 156633824}
+  EXP: {fileID: 3875564}
 --- !u!1 &962361908
 GameObject:
   m_ObjectHideFlags: 0
@@ -7097,13 +7101,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: 
-  description: 
+  explanation: 
   characterStats:
     statsChangeType: 0
     maxHealth: 0
     speed: 0
     attackSO: {fileID: 0}
   level: 0
+  maxExp: 0
   exp: 0
 --- !u!4 &2081359672
 Transform:
